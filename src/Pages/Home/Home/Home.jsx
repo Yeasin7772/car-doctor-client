@@ -1,3 +1,5 @@
+import MeetSection from "../../MeetSection/MeetSection";
+import Products from "../../Products/Products";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Services from "../Services/Services";
@@ -9,6 +11,8 @@ const Home = () => {
            <Banner></Banner>
            <About></About>
            <Services></Services>
+           <Products></Products>
+           <MeetSection></MeetSection>
         </div>
     );
 };
