@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ServicesCard from "./ServicesCard";
 
 
+
 const Services = () => {
     const [services, setServices] = useState()
     console.log(services);
@@ -29,6 +30,8 @@ const Services = () => {
                     </ServicesCard>)
                 }
             </div>
+
+           
         </div>
     );
 };

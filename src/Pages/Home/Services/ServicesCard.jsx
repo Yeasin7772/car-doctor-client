@@ -16,6 +16,8 @@ const ServicesCard = ({ service }) => {
                     </div>
                 </div>
             </div>
+
+           
         </div>
     );
 };
