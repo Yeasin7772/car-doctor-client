@@ -1,6 +1,8 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext } from "react"
+import anim from '../../public/anim.json'
+import Lottie from "lottie-react";
 
 
 const PrivateRoute = ({ children }) => {
@@ -8,7 +10,8 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
     // console.log(location.pathname);
     if (loading) {
-        return <progress className="progress w-full"></progress>
+        return <div className="flex justify-center items-center"><Lottie animationData={anim}> </Lottie></div>
+       // <progress className="progress w-full"></progress>
     }
 
     if (user?.email) {

@@ -16,6 +16,7 @@ const Login = () => {
         const form = e.target
         const email = form.email.value
         const password = form.password.value
+        
 
         userLogin(email, password)
             .then(result => {
@@ -26,7 +27,8 @@ const Login = () => {
 
                 // get access token 
                 axios.post('http://localhost:5000/jwt', user,
-                 { withCredentials: true }
+                { withCredentials: true }
+
                  )
                     .then(res => {
                         console.log(res.data)
