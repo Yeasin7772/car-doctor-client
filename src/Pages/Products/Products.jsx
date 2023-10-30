@@ -13,7 +13,7 @@ const Products = () => {
             .then(data => setProducts(data))
 
     }, [])
-    console.log(products);
+   // console.log(products);
     return (
         <div className="mt-5">
             <div className="text-center space-y-5">

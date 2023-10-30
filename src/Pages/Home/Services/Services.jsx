@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import useServices from "../../../hooks/useServices";
 import ServicesCard from "./ServicesCard";
 
 
 
 const Services = () => {
-    const [services, setServices] = useState()
+    const services = useServices()
     console.log(services);
-    useEffect(() => {
+    // const [services, setServices] = useState()
+    // console.log(services);
+    // useEffect(() => {
 
-        fetch('http://localhost:5000/services')
-            .then(res => res.json())
-            .then(data => setServices(data))
+    //     fetch('http://localhost:5000/services')
+    //         .then(res => res.json())
+    //         .then(data => setServices(data))
 
-    }, [])
+    // }, [])
     return (
         <div className="mt-5">
             <div className="text-center space-y-5">

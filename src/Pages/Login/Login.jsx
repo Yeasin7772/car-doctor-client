@@ -2,7 +2,7 @@ import img from '../../assets/images/login/login.svg'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import axios from 'axios';
+
 
 const Login = () => {
 
@@ -22,20 +22,7 @@ const Login = () => {
             .then(result => {
                 const loginUser = result.user
                 console.log(loginUser);
-                const user = { email }
-
-
-                // get access token 
-                axios.post('http://localhost:5000/jwt', user,
-                { withCredentials: true }
-
-                 )
-                    .then(res => {
-                        console.log(res.data)
-                        if (res.data.success) {
-                            navigate(location?.state ? location?.state : '/')
-                        }
-                    })
+            
 
             })
             .catch(error => console.log(error));
